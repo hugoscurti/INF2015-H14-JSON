@@ -1,0 +1,36 @@
+package exercices;
+
+import net.sf.json.JSONArray;
+import net.sf.json.JSONObject;
+import utilitaires.FileReader;
+
+public class exercice5 {
+
+    public static void main(String[] args) throws Exception {
+        String contenu = FileReader.loadFileIntoString("JSON/collection.json", "UTF-8");
+        JSONArray collection = JSONArray.fromObject(contenu);
+              
+        JSONArray articles = new JSONArray();
+        double total = 0;
+        
+        for(int i = 0; i < collection.size(); i++) {
+            JSONObject uniteArticle;
+            JSONObject article = collection.getJSONObject(i);
+            if (article.getDouble("prix") < 28.00) {
+                uniteArticle = JSONObject.fromObject(article);
+                uniteArticle.element("quantite", 1);
+                total += uniteArticle.getDouble("prix");
+                articles.add(uniteArticle);
+            }
+        }
+        
+        JSONObject commande = new JSONObject();
+        commande.accumulate("noCommande", 10432);
+        commande.accumulate("date", "2014-01-23");
+        commande.accumulate("prix", total);
+        commande.accumulate("articles", articles);
+
+        System.out.println(commande.toString(4));
+        
+    }
+}
