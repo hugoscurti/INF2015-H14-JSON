@@ -7,6 +7,9 @@ import utilitaires.FileReader;
 public class exercice5 {
 
     public static void main(String[] args) throws Exception {
+        /* Créer un nouvel objet JSON et y ajouter une unité de chaque articles de la collection
+         * dont le prix est inférieur à 28$.
+         */
         String contenu = FileReader.loadFileIntoString("JSON/collection.json", "UTF-8");
         JSONArray collection = JSONArray.fromObject(contenu);
               
@@ -18,7 +21,7 @@ public class exercice5 {
             JSONObject article = collection.getJSONObject(i);
             if (article.getDouble("prix") < 28.00) {
                 uniteArticle = JSONObject.fromObject(article);
-                uniteArticle.element("quantite", 1);
+                uniteArticle.element("quantite", 1); //On veut 1 unité de cet article
                 total += uniteArticle.getDouble("prix");
                 articles.add(uniteArticle);
             }

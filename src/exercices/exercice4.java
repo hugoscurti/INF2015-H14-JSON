@@ -6,6 +6,8 @@ import net.sf.json.JSONObject;
 public class exercice4 {
 
     public static void main(String[] args) {
+        /* Créer un nouvel objet JSON et y ajouter des éléments*/
+        
         JSONObject commande = new JSONObject();
         commande.accumulate("noCommande", 10432);
         commande.accumulate("date", "2014-01-23");

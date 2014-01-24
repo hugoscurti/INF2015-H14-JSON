@@ -7,6 +7,7 @@ import utilitaires.FileReader;
 public class exercice3 {
 
     public static void main(String[] args) throws Exception{
+        /*Afficher le nom et le prix des articles qui sont en stock*/
         String contenu = FileReader.loadFileIntoString("JSON/collection.json", "UTF-8");
         JSONArray collectionJSON = JSONArray.fromObject(contenu);
         
@@ -16,7 +17,7 @@ public class exercice3 {
             if (article.getInt("quantite") > 0) {
                 String nom = article.getString("nom");
                 Double prix = article.getDouble("prix");
-                System.out.printf("-%s : %s$\n", nom, prix.toString());
+                System.out.println("-" + nom + " : " + prix.toString() + "$");
             }
         }
     }
