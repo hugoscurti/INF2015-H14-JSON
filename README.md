@@ -24,10 +24,10 @@ Quelques infos supplémentaires
     * getNull
 * On peut instancier un objet JSONArray avec soit la fonction JSONArray.fromObject(),
   soit la fonction JSONSerializer.toJSON().
-  
-    JSONArray monTableau = (JSONArray) JSONSerializer.toJSON(contenuString);
-    ou
-    JSONArray monTableau = JSONArray.fromObject(contenuString);
+    
+        JSONArray monTableau = (JSONArray) JSONSerializer.toJSON(contenuString);
+        ou
+        JSONArray monTableau = JSONArray.fromObject(contenuString);
     
 
 #### JSONObject
@@ -35,10 +35,10 @@ Quelques infos supplémentaires
   sauf qu'on passe en paramètre la clé associé à l'élément, et non l'index.
 * On peut instancier un objet JSONObject avec soit la fonction JSONObject.fromObject(),
   soit la fonction JSONSerializer.toJSON().
-  
-    JSONObject monObjet = (JSONObject) JSONSerializer.toJSON(contenuString);
-    ou
-    JSONObject monObjet = JSONObject.fromObject(contenuString);
+
+        JSONObject monObjet = (JSONObject) JSONSerializer.toJSON(contenuString);
+        ou
+        JSONObject monObjet = JSONObject.fromObject(contenuString);
     
 
 #### Fonction toString()
