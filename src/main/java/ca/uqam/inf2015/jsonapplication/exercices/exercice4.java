@@ -1,4 +1,4 @@
-package exercices;
+package ca.uqam.inf2015.jsonapplication.exercices;
 
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;

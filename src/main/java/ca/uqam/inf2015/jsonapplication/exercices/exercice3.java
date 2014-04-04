@@ -1,8 +1,8 @@
-package exercices;
+package ca.uqam.inf2015.jsonapplication.exercices;
 
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
-import utilitaires.FileReader;
+import ca.uqam.inf2015.jsonapplication.utilitaires.FileReader;
 
 public class exercice3 {
 

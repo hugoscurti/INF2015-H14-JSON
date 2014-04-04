@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package utilitaires;
+package ca.uqam.inf2015.jsonapplication.utilitaires;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
